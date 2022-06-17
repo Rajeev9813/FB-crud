@@ -4,18 +4,19 @@ from tkinter import messagebox  # importing sql to access this library
 root = Tk()
 root.title('FACEBOOK')
 
+
 conn = sqlite3.connect('facebook.db')
 c = conn.cursor()
 # c.execute(""" CREATE TABLE user(
-#         first_name text,
-#         last_name text,
-#         address text,
-#         age integer,
-#         password text,
-#         father_name text,
-#         city text,
-#         zipcode integer
-#    )""")
+#           first_name text,
+#           last_name text,
+#           address text,
+#           age integer,
+#           password text,
+#           father_name text,
+#           city text,
+#           zipcode integer
+#     )""")
 # print("Table created successfully")
 
 def submit():
@@ -89,7 +90,6 @@ def update():
         password= :password,
         father_name= :father_name,
         city = :city,
-        state = :state,
         zipcode = :zipcode
         WHERE oid = :oid""",
               {'first': f_name_editor.get(),
